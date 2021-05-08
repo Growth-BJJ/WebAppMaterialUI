@@ -2,8 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-
-
+import Hidden from '@material-ui/core/Hidden';
+import facebook from '../../assets/facebook.svg';
+import twitter from '../../assets/twitter.svg';
+import instagram from '../../assets/instagram.svg';
 import footerAdornment from '../../assets/growthAssets/Growth Final-03.png';
 
 const useStyles = makeStyles(theme => ({
@@ -16,10 +18,10 @@ const useStyles = makeStyles(theme => ({
   adornment: {
     width: "13em",
     [theme.breakpoints.down("md")]: {
-      width: "12em"
+      width: "11em"
     },
     [theme.breakpoints.down("xs")]: {
-      width: "11em"
+      width: "9em"
     },
     verticalAlign: "bottom",
   },
@@ -35,6 +37,15 @@ const useStyles = makeStyles(theme => ({
   },
   gridItem: {
     margin: "3em"
+  },
+  icon: {
+    height: "4em",
+    width: "4em"
+  },
+  socialContainer: {
+    position: "absolute",
+    marginTop: "-6em",
+    right: "1.5em"
   }
 }))
 
@@ -43,6 +54,7 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
+      <Hidden mdDown>
       <Grid container justify="center" className={classes.mainContainer}>
         <Grid item className={classes.gridItem}>
           <Grid container direction="column" spacing={2}>
@@ -104,7 +116,19 @@ export default function Footer() {
           </Grid>
         </Grid>
       </Grid>
+      </Hidden>
       <img alt="black decorative slash" src={footerAdornment} className={classes.adornment}/>
+      <Grid container justify="flex-end" className={classes.socialContainer}>
+        <Grid item component={"a"} href="https://www.facebook.com" rel="noopener noreferrer" target="_blank">
+          <img alt="facebook logo" src={facebook} className={classes.icon}/>
+        </Grid>
+        <Grid item component={"a"} href="https://www.twitter.com" rel="noopener noreferrer" target="_blank">
+          <img alt="twitter logo" src={twitter} className={classes.icon}/>
+        </Grid>
+        <Grid item component={"a"} href="https://www.instagram.com" rel="noopener noreferrer" target="_blank">
+          <img alt="instagram logo" src={instagram} className={classes.icon}/>
+        </Grid>
+      </Grid>
     </footer>
   );
 }
