@@ -4,7 +4,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 
-import footerAdornment from '../../assets/Footer Adornment.svg';
+import footerAdornment from '../../assets/growthAssets/Growth Final-03.png';
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -14,14 +14,14 @@ const useStyles = makeStyles(theme => ({
     position: "relative"
   },
   adornment: {
-    width: "25em",
-    verticalAlign: "bottom",
+    width: "13em",
     [theme.breakpoints.down("md")]: {
-      width: "21em"
+      width: "12em"
     },
     [theme.breakpoints.down("xs")]: {
-      width: "15em"
-    }
+      width: "11em"
+    },
+    verticalAlign: "bottom",
   },
   mainContainer: {
     position: "absolute"
@@ -72,13 +72,13 @@ export default function Footer() {
             <Grid item component={Link} to="/schedule" className={classes.link}>
               Schedule
             </Grid>
-            <Grid item component={Link} to="/revolution" className={classes.link}>
+            <Grid item component={Link} to="/schedule" className={classes.link}>
               Vision
             </Grid>
-            <Grid item component={Link} to="/revolution" className={classes.link}>
+            <Grid item component={Link} to="/schedule" className={classes.link}>
               Technology
             </Grid>
-            <Grid item component={Link} to="/revolution" className={classes.link}>
+            <Grid item component={Link} to="/schedule" className={classes.link}>
               Process
             </Grid>
           </Grid>

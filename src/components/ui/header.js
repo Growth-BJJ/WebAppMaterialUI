@@ -1,4 +1,4 @@
-import growthlogo from '../../assets/growthAssets/Growth Final-03.png'
+import growthlogo from '../../assets/growthAssets/Growth Final-06.png'
 
 import React, { useState, useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
