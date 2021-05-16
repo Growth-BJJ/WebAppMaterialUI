@@ -222,10 +222,10 @@ export default function Header(props) {
         color="secondary"
         className={classes.button}
         component={Link}
-        to={"/freeclass"}
-        label="FreeClass"
+        to={"/login"}
+        label="Login"
       >
-        Free Class
+        Login
       </Button>
       <Menu
         id="simple-menu"
@@ -288,13 +288,13 @@ export default function Header(props) {
           classes={{root: classes.drawerItemEstimate, selected: classes.drawerItemSelected}}
           divider
           button
-          component={Link} to="/freeclass"
+          component={Link} to="/consultation"
         >
           <ListItemText
             classes={{root: classes.drawerItem}}
             disableTypography
           >
-            Free Class
+            Login
           </ListItemText>
         </ListItem>
       </List>
