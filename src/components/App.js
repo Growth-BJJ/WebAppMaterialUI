@@ -5,6 +5,7 @@ import Header from '../components/ui/header';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Footer from '../components/ui/footer';
 import Home from './Home';
+import Schedule from './Schedule';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -20,7 +21,7 @@ function App() {
           <Route exact={true} path="/adults" component={() => <div>Adult Classes</div>} />
           <Route exact={true} path="/kids" component={() => <div>Kids Program</div>} />
           <Route exact={true} path="/family" component={() => <div>Family Plans</div>} />
-          <Route exact={true} path="/schedule" component={() => <div>Schedule</div>} />
+          <Route exact={true} path="/schedule" component={Schedule} />
           <Route exact={true} path="/about" component={() => <div>About Us</div>} />
           <Route exact={true} path="/contact" component={() => <div>Contact Us</div>} />
           <Route exact={true} path="/login" component={() => <div>Login</div>} />

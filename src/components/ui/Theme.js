@@ -25,16 +25,21 @@ export default createMuiTheme({
       fontWeight: 700,
       fontSize: "1rem",
     },
-     estimate: {
-      fontFamily: "Pacifico",
+     login: {
+      fontFamily: "Goblin One",
       fontSize: "1rem",
       textTransform: "none",
-      color: "white",
+      color: "black",
+     },
+     header1: {
+      fontFamily: "Goblin One",
+      fontWeight: "700",
+      fontSize: "3.5em"
      },
      h2: {
        fontFamily: "Raleway",
        fontWeight: "700",
-       fontSize: "4.5em"
+       fontSize: "2.5em"
      },
      h3: {
        fontFamily: "Raleway",

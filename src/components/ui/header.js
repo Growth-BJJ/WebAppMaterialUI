@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "25px"
   },
   button: {
-     ...theme.typography.estimate,
+     ...theme.typography.login,
      borderRadius: "50px",
      marginLeft: "50px",
      marginRight: "25px",
