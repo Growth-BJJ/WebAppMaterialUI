@@ -9,8 +9,8 @@ import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+// import Menu from '@material-ui/core/Menu';
+// import MenuItem from '@material-ui/core/MenuItem';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -63,7 +63,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   tabContainer: {
-    marginLeft: "auto"
+    marginLeft: "auto",
+    marginRight: "50px"
   },
   tab: {
     ...theme.typography.tab,
@@ -129,55 +130,67 @@ export default function Header(props) {
 
 
   const [openDrawer, setOpenDrawer] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [openMenu, setOpenMenu ] = useState(false);
+  // const [anchorEl, setAnchorEl] = useState(null);
+  // const [openMenu, setOpenMenu ] = useState(false);
 
 
   const handleChange = (e, newValue) => {
     props.setValue(newValue);
   };
 
-  const handleClick = (e) => {
-    setAnchorEl(e.currentTarget);
-    setOpenMenu(true);
-  }
+  // const handleClick = (e) => {
+  //   setAnchorEl(e.currentTarget);
+  //   setOpenMenu(true);
+  // }
 
-  const handleMenuItemClick = (e, i) => {
-    setAnchorEl(null);
-    setOpenMenu(false);
-    props.setSelectedIndex(i);
-  }
+  // const handleMenuItemClick = (e, i) => {
+  //   setAnchorEl(null);
+  //   setOpenMenu(false);
+  //   props.setSelectedIndex(i);
+  // }
 
-  const handleClose = (e) => {
-    setAnchorEl(null);
-    setOpenMenu(false);
-  }
+  // const handleClose = (e) => {
+  //   setAnchorEl(null);
+  //   setOpenMenu(false);
+  // }
 
   // eslint-disable-next-line
-  const menuOptions = [
-    {name: "Memberships", link: "/memberships", activeIndex: 1, selectedIndex: 0},
-    {name: "Kids Program", link: "/kids", activeIndex: 1, selectedIndex: 1},
-    {name: "Adult Classes", link: "adults", activeIndex: 1, selectedIndex: 2},
-    {name: "Family Plans", link: "/family", activeIndex: 1, selectedIndex: 3}
-  ];
+  // const menuOptions = [
+  //   {name: "Memberships", link: "/memberships", activeIndex: 1, selectedIndex: 0},
+  //   {name: "Kids Program", link: "/kids", activeIndex: 1, selectedIndex: 1},
+  //   {name: "Adult Classes", link: "adults", activeIndex: 1, selectedIndex: 2},
+  //   {name: "Family Plans", link: "/family", activeIndex: 1, selectedIndex: 3},
+  // ];
+  // const aboutMenu = [
+  //   {name: "About Us", link: "/about", activeIndex: 3, selectedIndex: 0},
+  //   {name: "History", link: "/history", activeIndex: 3, selectedIndex: 1}
+  // ];
   // eslint-disable-next-line
   const routes = [
     {name: "Home", link: "/", activeIndex: 0},
     {
-      name: "Memberships",
+      name: "Membership",
       link: "/memberships",
       activeIndex: 1,
-      ariaOwns: anchorEl ? "simple-menu" : undefined,
-      ariaPopup: anchorEl ? "true" : undefined,
-      mouseOver: event => handleClick(event)
+      // ariaOwns: anchorEl ? "simple-menu" : undefined,
+      // ariaPopup: anchorEl ? "true" : undefined,
+      // mouseOver: event => handleClick(event)
     },
     {name: "Schedule", link: "/schedule", activeIndex: 2},
-    {name: "About Us", link: "/about", activeIndex: 3},
+    {
+      name: "About Us",
+      link: "/about",
+      activeIndex: 3,
+      // ariaOwns: anchorEl ? "about-menu" : undefined,
+      // ariaPopup: anchorEl ? "true" : undefined,
+      // mouseOver: event => handleClick(event)
+    },
     {name: "Contact Us", link: "/contact", activeIndex: 4}
   ];
 
   useEffect(() => {
-    [...menuOptions, ...routes].forEach(route => {
+    [...routes].forEach(route => {
+    // [...menuOptions, ...aboutMenu, ...routes].forEach(route => {
       switch (window.location.pathname) {
         case `${route.link}`:
           if (props.value !== route.activeIndex) {
@@ -192,7 +205,8 @@ export default function Header(props) {
 
       }
     });
-  }, [props.value, menuOptions, props.selectedIndex, routes, props]);
+  // }, [props.value, menuOptions, aboutMenu, props.selectedIndex, routes, props]);
+  }, [props.value, props.selectedIndex, routes, props]);
 
   const tabs = (
     <React.Fragment>
@@ -217,7 +231,7 @@ export default function Header(props) {
         )}
 
       </Tabs>
-      <Button
+      {/* <Button
         variant="contained"
         color="secondary"
         className={classes.button}
@@ -226,8 +240,8 @@ export default function Header(props) {
         label="Login"
       >
         Login
-      </Button>
-      <Menu
+      </Button> */}
+      {/* <Menu
         id="simple-menu"
         anchorEl={anchorEl}                                                                c
         open={openMenu}
@@ -250,7 +264,31 @@ export default function Header(props) {
             {option.name}
             </MenuItem>
           ))}
-      </Menu>
+      </Menu> */}
+      {/* <Menu
+        id="about-menu"
+        anchorEl={anchorEl}                                                                c
+        open={openMenu}
+        onClose={handleClose}
+        classes={{paper: classes.menu}}
+        MenuListProps={{onMouseLeave: handleClose}}
+        elevation={0}
+        style={{zIndex: 1302}} //one above app bar
+        keepMounted //makes sure all menu items are always mounted on the DOM
+      >
+          {aboutMenu.map((option, i) => (
+            <MenuItem
+            key={`${option}${i}`}
+            component={Link}
+            to={option.link}
+            classes={{root: classes.menuItem}}
+            onClick={(event)=> {handleMenuItemClick(event, i); props.setValue(3); handleClose()}}
+            selected={i === props.selectedIndex && props.value === 3}
+          >
+            {option.name}
+            </MenuItem>
+          ))}
+      </Menu> */}
     </React.Fragment>
   )
 
@@ -282,7 +320,7 @@ export default function Header(props) {
           </ListItem>
         ))}
 
-        <ListItem
+        {/* <ListItem
           selected={props.value === 5}
           onClick={() => {setOpenDrawer(false); props.setValue(5)}}
           classes={{root: classes.drawerItemEstimate, selected: classes.drawerItemSelected}}
@@ -296,7 +334,7 @@ export default function Header(props) {
           >
             Login
           </ListItemText>
-        </ListItem>
+        </ListItem> */}
       </List>
     </SwipeableDrawer>
     <IconButton className={classes.drawerIconContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>

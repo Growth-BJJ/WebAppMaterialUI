@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+// import Hidden from '@material-ui/core/Hidden';
 import facebook from '../../assets/facebook.svg';
 import twitter from '../../assets/twitter.svg';
 import instagram from '../../assets/instagram.svg';
@@ -61,7 +61,7 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Hidden mdDown>
+      {/* <Hidden mdDown>
       <Grid container justify="center" className={classes.mainContainer}>
         <Grid item className={classes.gridItem}>
           <Grid container direction="column" spacing={2}>
@@ -123,7 +123,7 @@ export default function Footer() {
           </Grid>
         </Grid>
       </Grid>
-      </Hidden>
+      </Hidden> */}
       <img alt="black decorative slash" src={footerAdornment} className={classes.adornment}/>
       <Grid container justify="flex-end" spacing={2} className={classes.socialContainer}>
         <Grid item component={"a"} href="https://www.facebook.com" rel="noopener noreferrer" target="_blank">

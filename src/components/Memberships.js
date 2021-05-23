@@ -24,13 +24,14 @@ const useStyles = makeStyles(theme => ({
   },
   header3: {
     fontWeight: "700",
-    fontSize: "2em",
+    fontSize: "1.5em",
     margin: ".5em",
     textDecoration: "underline"
   },
   header4: {
     fontFamily: "Raleway",
-    fontSize: "1em"
+    fontWeight: "700",
+    fontSize: "1.5em"
   }
 }));
 
@@ -42,43 +43,29 @@ export default function Schedule(props) {
   return (
     <Grid container direction="column" className={classes.container}>
       <Grid container justify="center" >
-          <Typography className={classes.header1} align="center">Schedule</Typography>
+          <Typography className={classes.header1} align="center">Membership Options</Typography>
       </Grid>
       <Grid container justify="space-evenly" align="center" direction="row">
         <Grid item direction="column">
-          <Typography className={classes.header3} align="center">Monday</Typography>
+          <Typography className={classes.header3} align="center">Drop In</Typography>
+          <Typography className={classes.header4} align="center">$25</Typography>
         </Grid>
         <Grid item>
           <Grid container direction="column">
-            <Typography className={classes.header3} align="center">Tuesday</Typography>
-            <Typography className={classes.header4} align="center">BJJ - Open Mat <br/>5:30pm - 730pm</Typography>
+            <Typography className={classes.header3} align="center">Monthly Membership (Grandfathered Sale)</Typography>
+            <Typography className={classes.header4} align="center">$110</Typography>
           </Grid>
         </Grid>
         <Grid item>
         <Grid container direction="column">
-            <Typography className={classes.header3} align="center">Wednesday</Typography>
-            <Typography className={classes.header4} align="center">BJJ - Gi <br/>5:30pm - 730pm</Typography>
+            <Typography className={classes.header3} align="center">Monthly Membership (Full Price)</Typography>
+            <Typography className={classes.header4} align="center">$185</Typography>
           </Grid>
         </Grid>
         <Grid item>
         <Grid container direction="column">
-            <Typography className={classes.header3} align="center">Thursday</Typography>
-            <Typography className={classes.header4} align="center">BJJ - Open Mat / Takedowns <br/>5:30pm - 730pm</Typography>
-          </Grid>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.header3} align="center">Friday</Typography>
-        </Grid>
-        <Grid item>
-        <Grid container direction="column">
-            <Typography className={classes.header3} align="center">Saturday</Typography>
-            <Typography className={classes.header4} align="center">BJJ - Open Mat <br/>1:00pm - 3:00pm</Typography>
-          </Grid>
-        </Grid>
-        <Grid item>
-        <Grid container direction="column">
-            <Typography className={classes.header3} align="center">Sunday</Typography>
-            <Typography className={classes.header4} align="center">BJJ - No Gi <br/>5:30pm - 730pm</Typography>
+            <Typography className={classes.header3} align="center">Yearly Membership</Typography>
+            <Typography className={classes.header4} align="center">$2,220</Typography>
           </Grid>
         </Grid>
       </Grid>
