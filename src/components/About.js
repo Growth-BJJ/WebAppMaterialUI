@@ -20,7 +20,8 @@ const useStyles = makeStyles(theme => ({
   },
   header1: {
     ...theme.typography.header1,
-    margin: "1em"
+    margin: "1em",
+    marginTop: "2em"
   },
   header3: {
     fontWeight: "700",

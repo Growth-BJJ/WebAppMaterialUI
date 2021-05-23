@@ -20,7 +20,8 @@ const useStyles = makeStyles(theme => ({
   },
   header1: {
     ...theme.typography.header1,
-    margin: "1em"
+    margin: "1em",
+    marginTop: "2em"
   },
   header3: {
     fontWeight: "700",
@@ -32,6 +33,11 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "Raleway",
     fontWeight: "700",
     fontSize: "1.5em"
+  },
+  signup: {
+    fontWeight: "700",
+    fontSize: "2.5em",
+    marginTop: "2em"
   }
 }));
 
@@ -47,12 +53,12 @@ export default function Schedule(props) {
       </Grid>
       <Grid container justify="space-evenly" align="center" direction="row">
         <Grid item direction="column">
-          <Typography className={classes.header3} align="center">Drop In</Typography>
+          <Typography className={classes.header3} align="center">Drop In Fee</Typography>
           <Typography className={classes.header4} align="center">$25</Typography>
         </Grid>
         <Grid item>
           <Grid container direction="column">
-            <Typography className={classes.header3} align="center">Monthly Membership (Grandfathered Sale)</Typography>
+            <Typography className={classes.header3} align="center">Monthly Membership (Grandfathered Sale!)</Typography>
             <Typography className={classes.header4} align="center">$110</Typography>
           </Grid>
         </Grid>
@@ -68,6 +74,9 @@ export default function Schedule(props) {
             <Typography className={classes.header4} align="center">$2,220</Typography>
           </Grid>
         </Grid>
+      </Grid>
+      <Grid container justify="center" >
+          <Typography className={classes.signup} align="center">Sign up at www.growthjiujitsu.com!</Typography>
       </Grid>
     </Grid>
 

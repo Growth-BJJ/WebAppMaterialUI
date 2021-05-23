@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     justifyContent: "flex-start",
     backgroundColor: theme.palette.secondary.main
+    // backgroundColor: "white"
   },
   logo: {
     height: "275px",
@@ -20,7 +21,8 @@ const useStyles = makeStyles(theme => ({
   },
   header1: {
     ...theme.typography.header1,
-    margin: "1em"
+    margin: "1em",
+    marginTop: "2em"
   },
   header3: {
     fontWeight: "700",
@@ -44,10 +46,10 @@ export default function Schedule(props) {
       <Grid container justify="center" >
           <Typography className={classes.header1} align="center">Schedule</Typography>
       </Grid>
-      <Grid container justify="space-evenly" align="center" direction="row">
-        <Grid item direction="column">
+      <Grid container justify="center" align="center" direction="row">
+        {/* <Grid item direction="column">
           <Typography className={classes.header3} align="center">Monday</Typography>
-        </Grid>
+        </Grid> */}
         <Grid item>
           <Grid container direction="column">
             <Typography className={classes.header3} align="center">Tuesday</Typography>
@@ -66,9 +68,9 @@ export default function Schedule(props) {
             <Typography className={classes.header4} align="center">BJJ - Open Mat / Takedowns <br/>5:30pm - 730pm</Typography>
           </Grid>
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <Typography className={classes.header3} align="center">Friday</Typography>
-        </Grid>
+        </Grid> */}
         <Grid item>
         <Grid container direction="column">
             <Typography className={classes.header3} align="center">Saturday</Typography>
@@ -78,7 +80,7 @@ export default function Schedule(props) {
         <Grid item>
         <Grid container direction="column">
             <Typography className={classes.header3} align="center">Sunday</Typography>
-            <Typography className={classes.header4} align="center">BJJ - No Gi <br/>5:30pm - 730pm</Typography>
+            <Typography className={classes.header4} align="center">BJJ - No Gi <br/>3:00pm - 5:00pm</Typography>
           </Grid>
         </Grid>
       </Grid>
