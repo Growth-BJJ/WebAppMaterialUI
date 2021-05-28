@@ -65,7 +65,7 @@ export default function Schedule(props) {
         <Grid item>
         <Grid container direction="column">
             <Typography className={classes.header3} align="center">Thursday</Typography>
-            <Typography className={classes.header4} align="center">BJJ - Open Mat / Takedowns <br/>5:30pm - 730pm</Typography>
+            <Typography className={classes.header4} align="center">BJJ - Wrestling <br/>5:30pm - 730pm</Typography>
           </Grid>
         </Grid>
         {/* <Grid item>

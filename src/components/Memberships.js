@@ -59,7 +59,7 @@ export default function Schedule(props) {
         <Grid item>
           <Grid container direction="column">
             <Typography className={classes.header3} align="center">Monthly Membership (Grandfathered Sale!)</Typography>
-            <Typography className={classes.header4} align="center">$110</Typography>
+            <Typography className={classes.header4} align="center">$115</Typography>
           </Grid>
         </Grid>
         <Grid item>

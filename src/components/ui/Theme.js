@@ -1,21 +1,21 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-// const arcBlue = "#5C0923";
-const arcBlue = "#4e6876";
-const arcOrange = "#e2d1a6";
-// const arcOrange = "#FFFFFF";
+const primaryColor = "#8bb182";
+// const primaryColor = "#4e6876";
+// const secondaryColor = "#e2d1a6";
+const secondaryColor = "#FFFFFF";
 
 export default createMuiTheme({
   palette: {
     common: {
-      blue: `${arcBlue}`,
-      orange: `${arcOrange}`
+      blue: `${primaryColor}`,
+      orange: `${secondaryColor}`
     },
     primary: {
-      main: `${arcBlue}`,
+      main: `${primaryColor}`,
     },
     secondary: {
-      main: `${arcOrange}`
+      main: `${secondaryColor}`
     }
   },
   typography: {
@@ -32,7 +32,7 @@ export default createMuiTheme({
       color: "black",
      },
      header1: {
-      fontFamily: "Goblin One",
+      fontFamily: "Permanent Marker",
       fontWeight: "700",
       fontSize: "3.5em"
      },

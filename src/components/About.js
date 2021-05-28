@@ -48,7 +48,7 @@ export default function About(props) {
       </Grid>
       <Grid container >
       <Typography className={classes.header4} align="center">
-      Growth Brazilian Jiu Jitsu is a martial arts club started by three friends who wanted to create a fun and welcoming environment for people to come and share their love for an art that continues to positively impact people around the world in many ways.
+      Growth Brazilian Jiu Jitsu is a martial arts club started by three friends who wanted to create a fun and welcoming environment for people to come and share their love for an art that continues to positively impact people around the world.
       </Typography>
       </Grid>
     </Grid>
