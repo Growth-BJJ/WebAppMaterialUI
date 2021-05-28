@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   container: {
-    height: "700px",
+    height: "900px",
     width: "100%",
     justifyContent: "flex-start",
     backgroundColor: theme.palette.secondary.main
@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   },
   signup: {
     fontWeight: "700",
-    fontSize: "1.25em",
+    fontSize: "1.5em",
     marginTop: "2em"
   }
 }));
@@ -86,7 +86,7 @@ export default function Schedule(props) {
       </Grid>
       <Grid item>
           <Grid container direction="column">
-            <Typography className={classes.signup} align="center">Sign up at www.growthjiujitsu.com!</Typography>
+            <Typography className={classes.signup} align="center">Sign up at <br/>www.growthjiujitsu.com!</Typography>
           </Grid>
         </Grid>
     </Grid>

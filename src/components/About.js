@@ -31,8 +31,8 @@ const useStyles = makeStyles(theme => ({
   header4: {
     fontFamily: "Raleway",
     fontSize: "1em",
-    marginRight: "5em",
-    marginLeft: "5em",
+    marginRight: "2.5em",
+    marginLeft: "2.5em",
     flexWrap: "wrap"
   }
 }));

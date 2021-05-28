@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   container: {
-    height: "700px",
+    height: "750px",
     width: "100%",
     //justifyContent: "flex-start",
     //justifyContent: "center",
@@ -47,7 +47,7 @@ export default function Contact(props) {
       <Grid container justify="center">
       <Typography className={classes.header1} align="center">Contact Us</Typography>
       </Grid>
-      <Grid container >
+      <Grid container justify="center" >
       <Typography className={classes.header4} align="center">
       Interested in joining, or have any questions at all? You can call or text us at 415-993-2608, or email us at support@growthjiujitsu.com
       </Typography>
