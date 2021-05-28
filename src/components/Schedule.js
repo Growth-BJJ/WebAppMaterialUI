@@ -13,7 +13,6 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     justifyContent: "flex-start",
     backgroundColor: theme.palette.secondary.main
-    // backgroundColor: "white"
   },
   logo: {
     height: "275px",
@@ -57,13 +56,13 @@ export default function Schedule(props) {
           </Grid>
         </Grid>
         <Grid item>
-        <Grid container direction="column">
+          <Grid container direction="column">
             <Typography className={classes.header3} align="center">Wednesday</Typography>
             <Typography className={classes.header4} align="center">BJJ - Gi <br/>5:30pm - 730pm</Typography>
           </Grid>
         </Grid>
         <Grid item>
-        <Grid container direction="column">
+          <Grid container direction="column">
             <Typography className={classes.header3} align="center">Thursday</Typography>
             <Typography className={classes.header4} align="center">BJJ - Wrestling <br/>5:30pm - 730pm</Typography>
           </Grid>
@@ -72,13 +71,13 @@ export default function Schedule(props) {
           <Typography className={classes.header3} align="center">Friday</Typography>
         </Grid> */}
         <Grid item>
-        <Grid container direction="column">
+          <Grid container direction="column">
             <Typography className={classes.header3} align="center">Saturday</Typography>
             <Typography className={classes.header4} align="center">BJJ - Open Mat <br/>1:00pm - 3:00pm</Typography>
           </Grid>
         </Grid>
         <Grid item>
-        <Grid container direction="column">
+          <Grid container direction="column">
             <Typography className={classes.header3} align="center">Sunday</Typography>
             <Typography className={classes.header4} align="center">BJJ - No Gi <br/>3:00pm - 5:00pm</Typography>
           </Grid>

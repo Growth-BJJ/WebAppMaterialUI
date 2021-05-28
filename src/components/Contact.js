@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   header4: {
     fontFamily: "Raleway",
-    fontSize: "2.5em",
+    fontSize: "1em",
     marginRight: "3em",
     marginLeft: "3em",
   }
