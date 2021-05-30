@@ -1,11 +1,11 @@
 import React from 'react';
 // import {Link} from 'react-router-dom';
 import {makeStyles} from '@material-ui/core/styles';
-// import Grid from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid';
 // import Hidden from '@material-ui/core/Hidden';
-// import facebook from '../../assets/facebook.svg';
-// import twitter from '../../assets/twitter.svg';
-// import instagram from '../../assets/instagram.svg';
+import facebook from '../../assets/facebook.svg';
+import twitter from '../../assets/twitter.svg';
+import instagram from '../../assets/instagram.svg';
 import footerAdornment from '../../assets/growthAssets/Growth Final-03.png';
 
 const useStyles = makeStyles(theme => ({
@@ -125,7 +125,7 @@ export default function Footer() {
       </Grid>
       </Hidden> */}
       <img alt="black decorative slash" src={footerAdornment} className={classes.adornment}/>
-      {/* <Grid container justify="flex-end" spacing={2} className={classes.socialContainer}>
+      <Grid container justify="flex-end" spacing={2} className={classes.socialContainer}>
         <Grid item component={"a"} href="https://www.facebook.com" rel="noopener noreferrer" target="_blank">
           <img alt="facebook logo" src={facebook} className={classes.icon}/>
         </Grid>
@@ -135,7 +135,7 @@ export default function Footer() {
         <Grid item component={"a"} href="https://www.instagram.com" rel="noopener noreferrer" target="_blank">
           <img alt="instagram logo" src={instagram} className={classes.icon}/>
         </Grid>
-      </Grid> */}
+      </Grid>
     </footer>
   );
 }

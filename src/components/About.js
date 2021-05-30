@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   container: {
-    height: "700px",
+    height: "800px",
     width: "100%",
     justifyContent: "flex-start",
     backgroundColor: theme.palette.secondary.main
